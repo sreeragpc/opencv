@@ -1,0 +1,10 @@
+import cv2 as cv
+img = cv.imread('D:\machine learning\opencv\wp2359348-bmw-drift-wallpapers.jpg')
+cv.imshow('bmw', img)
+b,g,r = cv.split(img)
+cv.imshow('bmwb', b)
+cv.imshow('bmwg', g)
+cv.imshow('bmwr', r)
+merged = cv.merge([b,g,r])
+cv.imshow('bmwrm', merged)
+cv.waitKey(0)
